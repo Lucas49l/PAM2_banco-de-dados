@@ -14,7 +14,6 @@ public class AppDataBase extends SQLiteOpenHelper {
     public static final String DB_NAME = "Loja.sqlite";
     public static int version = 1;
 
-
     public AppDataBase(Context context) {
         super(context, DB_NAME, null, version);
         Log.i(AppUtil.TAG, "AppDataBase: Criando Banco");
