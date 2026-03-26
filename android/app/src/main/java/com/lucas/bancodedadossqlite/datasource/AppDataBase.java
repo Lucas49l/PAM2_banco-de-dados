@@ -8,20 +8,24 @@ import android.util.Log;
 import androidx.annotation.Nullable;
 
 import com.lucas.bancodedadossqlite.api.AppUtil;
+import com.lucas.bancodedadossqlite.datamodel.ClienteDataModel;
 
 public class AppDataBase extends SQLiteOpenHelper {
 
     public static final String DB_NAME = "Loja.sqlite";
     public static int version = 1;
 
+    SQLiteDatabase db;
+
     public AppDataBase(Context context) {
         super(context, DB_NAME, null, version);
         Log.i(AppUtil.TAG, "AppDataBase: Criando Banco");
+        db = getReadableDatabase();
     }
 
     @Override
     public void onCreate(SQLiteDatabase db) {
-
+        db.execSQL(ClienteDataModel.criarTabela());
     }
 
     @Override
