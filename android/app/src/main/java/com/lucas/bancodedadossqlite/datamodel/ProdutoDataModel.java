@@ -5,6 +5,7 @@ import android.util.Log;
 import com.lucas.bancodedadossqlite.api.AppUtil;
 
 public class ProdutoDataModel {
+    
     public static final String TABELA = "produto";
     public static final String ID = "id";
     public static final String NOME = "nome";
