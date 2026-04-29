@@ -5,7 +5,6 @@ import android.util.Log;
 import com.lucas.bancodedadossqlite.api.AppUtil;
 
 public class ClienteDataModel {
-
     public static final String TABELA= "cliente";
     public static final String ID = "id";
     public static final String NOME = "nome";
@@ -20,7 +19,7 @@ public class ClienteDataModel {
         queryCriarTabela += EMAIL + " TEXT NOT NULL UNIQUE ";
         queryCriarTabela += ")";
 
-        Log.i(AppUtil.TAG, "criarTabela: " + queryCriarTabela);
+        Log.i(AppUtil.TAG, "criarTabelaCliente: " + queryCriarTabela);
 
         return queryCriarTabela;
     }
