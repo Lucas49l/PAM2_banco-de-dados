@@ -28,12 +28,19 @@ public class MainActivity extends AppCompatActivity {
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_main);
 
-        //obj.setNome("kaio");
-        //obj.setEmail("Kaio@gmail.com");
+        obj = new ClienteModel();
+        obj.setNome("Lucas");
+        obj.setEmail("lucas@gmail.com");
 
         clienteController = new ClienteController(this);
 
-        //clienteController.incluir(obj);
+        if(clienteController.incluir(obj)){
+            Toast.makeText(this, "Cliente incluido com sucesso", Toast.LENGTH_SHORT).show();
+        }else{
+            Toast.makeText(this, "Erro ao inserir cliente incluido com sucesso", Toast.LENGTH_SHORT).show();
+
+        }
+
 
         produtoController = new ProdutoController(this);
 

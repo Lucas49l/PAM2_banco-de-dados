@@ -16,7 +16,7 @@ import com.lucas.bancodedadossqlite.datamodel.ProdutoDataModel;
 public class AppDataBase extends SQLiteOpenHelper {
 
     public static final String DB_NAME = "Loja.sqlite";
-    public static int version = 1;
+    public static int version = 2;
 
     SQLiteDatabase db;
 
